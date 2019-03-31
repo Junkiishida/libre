@@ -1,0 +1,11 @@
+<h1>Bienvenu à libre</h1>
+
+<h2>Add a basket player</h2>
+
+<form action="/baskets" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="position" placeholder="Position">
+  <input type="text" name="nationality" placeholder="Nationality">
+  <input type="submit">
+</form>

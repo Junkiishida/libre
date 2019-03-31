@@ -1,0 +1,15 @@
+<h1>baskets</h1>
+
+<form action="/baskets" method="get">
+  <input type="text" name="player_type" placeholder="Nationality?">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @baskets.each do |id, basket| %>
+  <li>
+    <%= link_to basket[:name], baskets_path(id) %>
+    <%= basket[:position] %>
+  </li>
+  <% end %>
+</ul>

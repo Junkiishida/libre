@@ -5,11 +5,7 @@
   <input type="submit">
 </form>
 
-<ul>
-  <% @baskets.each do |id, basket| %>
-  <li>
-    <%= link_to basket[:name], baskets_path(id) %>
-    <%= basket[:position] %>
-  </li>
+  <% @baskets.each do |basket| %>
+    <h2><%= link_to basket.name, basket_path(basket) %></h2>
+    <p><%= basket[:position] %></p>
   <% end %>
-</ul>

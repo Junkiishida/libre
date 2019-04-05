@@ -41,6 +41,8 @@ class BasketsController < ApplicationController
     @basket = Basket.find(params[:id])
   end
 end
+
+
   # # Let's fake a database records
   # BASKETS = {
   #   1 => { name: "Tabuse", position: "Point Guard", nationality: "Japan" },

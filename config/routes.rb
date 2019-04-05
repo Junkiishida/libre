@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :baskets do
-    resources :about, only: [:index]
-    resources :contact, only: [:index]
+    # resources :about, only: [:index]
+    # resources :contact, only: [:index]
   end
 
   # get 'about', to: 'pages#about'

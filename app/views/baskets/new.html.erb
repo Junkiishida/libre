@@ -1,28 +1,4 @@
-<%= form_for @basket do |b| %>
-
-  <%= b.label :name, "Name" %>
-  <%= b.text_field :name %>
-
-  <%= b.label :positon, "Position" %>
-  <%= b.text_field :position %>
-
-  <%= b.label :nationality, "Nationality" %>
-  <%= b.text_field :nationality %>
-
-  <%= b.submit value="Add new player!" %>
-
-<% end %>
-
-
-
-
-
-
-
-
-
-
-
+<%= render "form" %>
 
 
 <!-- <form action="/baskets" method="post">

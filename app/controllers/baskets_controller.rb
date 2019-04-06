@@ -1,6 +1,6 @@
 class BasketsController < ApplicationController
 
-  before_action :set_basket, [:show, :edit, :update, :destroy]
+  before_action :set_basket, only: [:show, :edit, :update, :destroy]
 
   def index
     @baskets = Basket.all
@@ -22,8 +22,8 @@ class BasketsController < ApplicationController
   end
 
   def update
-    @basket = Basket.update(params[:basket])
-    redirect_to baskets_path
+    @basket.update(basket_params)
+    redirect_to basket_path(@basket)
   end
 
   def destroy
@@ -34,7 +34,7 @@ class BasketsController < ApplicationController
   private
 
   def basket_params
-    params.require(:basket).permit(:name, :position, :nationality)
+    params.require(:basket).permit(:name, :position, :nationality, :average_score)
   end
 
   def set_basket

@@ -1,0 +1,17 @@
+<%= form_for @basket do |b| %>
+
+  <%= b.label :name, "Name" %>
+  <%= b.text_field :name %>
+
+  <%= b.label :position, "Position" %>
+  <%= b.text_field :position %>
+
+  <%= b.label :nationality, "Nationality" %>
+  <%= b.text_field :nationality %>
+
+  <%= b.label :average_score, "Average Score" %>
+  <%= b.number_field :average_score %>
+
+  <%= b.submit value="Update the player" %>
+
+<% end %>

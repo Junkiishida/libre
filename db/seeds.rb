@@ -55,3 +55,5 @@ baskets_attributes = [
 baskets_attributes.each do |params|
   Basket.create!(params)
 end
+
+puts "Finished!"

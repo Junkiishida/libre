@@ -1,0 +1,9 @@
+<h1>Top Players</h1>
+
+
+<ul>
+<%= @top_baskets.each do |player| %>
+  <li><%= player.name %></li>
+  <li><%= player.average_score %></li>
+<% end %>
+</ul>

@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     collection do
       get "top" => "baskets#top"
     end
+    member do
+      get "team_mate" => "baskets#team_mate"
+    end
     resources :about, only: [:index]
     resources :contact, only: [:index]
   end

@@ -12,43 +12,50 @@ baskets_attributes = [
   name:            "Bakka",
   position:        "Forward",
   nationality:     "Jamaica",
-  average_score:   20
+  average_score:   20,
+  team_mate:       "Bakayarou"
 },
 {
   name:            "Haward",
   position:        "Center",
   nationality:     "USA",
-  average_score:   10
+  average_score:   10,
+  team_mate:       "David"
 },
 {
   name:            "Green",
   position:        "Power Forward",
   nationality:     "USA",
-  average_score:   10
+  average_score:   10,
+  team_mate:       "Boris"
 },
 {
   name:            "Pozingis",
   position:        "Shoter",
   nationality:     "Latvia",
-  average_score:   25
+  average_score:   25,
+  team_mate:       "Anthoney"
 },
 {
   name:            "Iverson",
   position:        "Guard",
   nationality:     "USA",
-  average_score:   30
+  average_score:   30,
+  team_mate:       "Mutombo"
 },
 {
   name:            "Kobe",
   position:        "Guard",
   nationality:     "USA",
-  average_score:   40
+  average_score:   40,
+  team_mate:       "Pau Gasol"
 },
 {
   name:            "Pau Gasol",
   position:        "Power Foward",
   nationality:     "Spain",
-  average_score:   20
+  average_score:   20,
+  team_mate:       "Kobe"
 }
 ]
 

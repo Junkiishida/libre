@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_07_133633) do
+ActiveRecord::Schema.define(version: 2019_04_09_124441) do
 
   create_table "baskets", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_04_07_133633) do
     t.datetime "updated_at", null: false
     t.integer "average_score"
     t.string "home_town"
+    t.string "team_mate"
   end
 
 end

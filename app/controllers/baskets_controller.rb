@@ -1,9 +1,13 @@
 class BasketsController < ApplicationController
 
-  before_action :set_basket, only: [:show, :edit, :update, :destroy]
+  before_action :set_basket, only: [:show, :edit, :update, :destroy, :team_mate]
 
   def top
     @top_baskets = Basket.where(average_score: 30)
+  end
+
+  def team_mate
+
   end
 
   def index

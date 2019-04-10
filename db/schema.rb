@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_09_124441) do
+ActiveRecord::Schema.define(version: 2019_04_09_131724) do
 
   create_table "baskets", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 2019_04_09_124441) do
     t.integer "average_score"
     t.string "home_town"
     t.string "team_mate"
+  end
+
+  create_table "evaluations", force: :cascade do |t|
+    t.integer "score"
+    t.string "comment"
+    t.integer "basket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["basket_id"], name: "index_evaluations_on_basket_id"
   end
 
 end

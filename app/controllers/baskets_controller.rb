@@ -22,8 +22,12 @@ class BasketsController < ApplicationController
   end
 
   def create
-    @basket = Basket.create(basket_params)
-    redirect_to baskets_path
+    @basket = Basket.new(basket_params)
+    if @basket.save
+      redirect_to basket_path(@basket)
+    else
+      render :new
+    end
   end
 
   def edit

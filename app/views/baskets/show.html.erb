@@ -12,6 +12,14 @@
   <%= @basket[:average_score] %>
 </p>
 
+<ul>
+  <%= @basket.evaluations.each do |evaluation| %>
+    <li><%= evaluation.score %></li>
+    <li><%= evaluation.comment %></li>
+  <% end %>
+</ul>
+
 <%= link_to "Back to the lists", baskets_path %>
 <%= link_to "Edit this player!", edit_basket_path %>
 <%= link_to "Team mate", team_mate_basket_path %>
+<%= link_to "Add evaluation", new_basket_evaluation_path(@basket) %>

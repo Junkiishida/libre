@@ -1,0 +1,18 @@
+<h1>Add evaluation for <%= @basket.name %></h1>
+
+<%= form_for [@basket, @evaluation] do |f| %>
+
+<% if @basket.errors.any? %>
+  <ul>
+    <%= @basket.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+  <%= f.label :score, "Score" %>
+  <%= f.text_field :score %>
+  <%= f.label :comment, "Comment" %>
+  <%= f.text_field :comment %>
+  <%= f.submit %>
+<% end %>

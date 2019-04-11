@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'evaluations/new'
+  get 'evaluations/create'
   root to: 'pages#home'
 
   resources :baskets do
@@ -10,7 +12,14 @@ Rails.application.routes.draw do
     end
     resources :about, only: [:index]
     resources :contact, only: [:index]
+    resources :evaluations, only: [:new, :create]
   end
+
+  namespace :admin do
+    resources :baskets, only: [:index]
+  end
+
+  get "admin/baskets" => "admin/baskets"
 
   # get 'about', to: 'pages#about'
   # get 'contact', to: 'pages#contact'

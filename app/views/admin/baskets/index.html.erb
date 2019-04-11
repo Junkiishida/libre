@@ -1,0 +1,17 @@
+<h1>My players</h1>
+<div class="container">
+  <div class="row">
+    <h1>baskets</h1>
+    <%= link_to "Add new player", new_basket_path %>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <% @baskets.each do |basket| %>
+        <h2><%= link_to basket.name, basket_path(basket) %></h2>
+        <p><%= basket[:position] %></p>
+        <p><%= basket.nationality %></p>
+        <%= link_to "Delete", basket_path(basket), method: :delete %>
+      <% end %>
+      </div>
+  </div>
+</div>

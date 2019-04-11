@@ -1,5 +1,13 @@
 <%= form_for @basket do |b| %>
 
+  <% if @basket.errors.any? %>
+    <ul>
+      <%= @basket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <%= b.label :name, "Name" %>
   <%= b.text_field :name %>
 

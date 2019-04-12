@@ -46,7 +46,7 @@ class BasketsController < ApplicationController
   private
 
   def basket_params
-    params.require(:basket).permit(:name, :position, :nationality, :average_score)
+    params.require(:basket).permit(:name, :position, :nationality)
   end
 
   def set_basket
